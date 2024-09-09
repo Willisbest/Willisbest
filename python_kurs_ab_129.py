@@ -1,10 +1,142 @@
-class SuperList():
-    def __len__(self):
-        return 1000
-    pass
+from functools import reduce
+
+my_list = [1,2,3]
+
+def multiply_by2(item):
+    return item * 2
+
+def only_odd(item):
+    return item % 2 != 0 #If the remeinder of x/2 does not equal 0 its not odd
+
+def accumulator(acc, item):
+    print(acc, item)
+    return acc + item
+
+print(reduce(accumulator, my_list, 0))
+print(my_list)
 
 
 
+
+
+
+
+
+
+
+
+# my_list = [1,2,3]
+# your_list = [10, 20, 30]
+# # def multiply_by2(item):
+# #     return item * 2
+
+# # def only_odd(item):
+# #     return item % 2 != 0 #If the remeinder of x/2 does not equal 0 its not odd
+
+# print(list(zip(my_list, your_list)))
+# print(my_list)
+
+
+
+
+
+
+
+
+
+
+# class A:
+#     num = 10
+
+# class B(A):
+#     pass
+
+# class C(A):
+#     num = 1
+
+# class D (B, C):
+#     pass
+
+# print(D.mro())
+# print(D.num)
+
+
+#     #     A
+#     #   /   \
+#     #  /     \
+#     # B       C
+#     #  \     /
+#     #   \   /
+#     #     D
+
+
+
+
+
+
+
+
+
+
+# #Multiple Inheritance
+# class User:
+
+#     def sign_in(self): #no need for __init__ without variables or attributes
+#         print("logged")
+ 
+# class Wizard(User):
+#     def __init__(self, name, power):
+#         #super().__init__(email)
+#         self.name = name
+#         self.power = power
+
+#     def attack(self):
+#         print(f"attacking with the power of {self.power}")
+
+# class Archer():
+#     def __init__(self, name, num_arrows):
+#         self.name = name
+#         self.num_arrows = num_arrows
+
+#     def attack(self):
+#         print(f"attacking with arrows: arrows left now: {self.num_arrows}")
+
+#     def run(self):
+#         print(f"{self.name} is running really fast!")
+
+
+# class HybridBorg(Wizard, Archer):
+#     def __init__(self, name, power, num_arrows):
+#         Archer.__init__(self, name, num_arrows)
+#         Wizard.__init__(self, name, power)
+
+# hb1 = HybridBorg("borgsen", "fire" , 100)
+
+# print(hb1.sign_in())
+
+
+
+
+
+
+
+
+
+
+
+
+# class SuperList(list):
+#     def __len__(self):
+#         return 1000
+    
+# super_list1 = SuperList();
+
+# print(len(super_list1))
+# super_list1.append(5)
+# print(super_list1[0])
+
+# print(issubclass(SuperList, list))
+# print(issubclass(list, object))
 
 
 
@@ -58,6 +190,13 @@ class SuperList():
 
 # # __repr__ - Developer-friendly representation of the toy
 # print(repr(toy1))  # Outputs: Toy(color=red, age=3)
+
+
+
+
+
+
+
 
 # class User:
 #     def __init__(self, email):
