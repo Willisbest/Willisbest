@@ -1,4 +1,95 @@
-#lambda practicetasks
+def my_decorator(func):
+    def wrap_func(*args,**kwargs):
+        print("XXXXXXXXXX")
+        func(*args,**kwargs)
+        print("XXXXXXXXXX")
+    return wrap_func
+
+@my_decorator
+def hello(greeting, emoji = ":("):
+    print(greeting, emoji)
+
+hello("hi")
+
+
+
+
+
+
+
+
+
+
+
+# return the duplicates "b" and "n" in a list
+
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+
+# my_task_dict = {}
+
+# #my_task_dict = {letter for letter in some_list if letter != my_task_dict.keys()}
+# #my_task_dict = {k: v for k, v in some_list if v != some_list.key}
+# #my_task_dict = {letter:letter for letter in [some_list]}
+# my_task_dict = {letter for letter in some_list if some_list.count(letter) > 1}
+
+
+
+# # duplicates = []
+# # for value in some_list:
+# #     if some_list.count(value) > 1:
+# #         if value not in duplicates:
+# #             duplicates.append(value)
+
+# # print(duplicates)
+# print(type(my_task_dict))
+# print(my_task_dict)
+
+
+
+
+
+
+
+
+
+
+
+# my_dict = {num:num*2 for num in [1,2,3]}
+
+# print(my_dict)  
+
+
+
+
+
+
+
+# my_list = {char for char in "herllo"}
+# my_list2 = {num for num in range(0,100)}
+# my_list3 = {num**2 for num in range(0,100)}
+# my_list4 = {num**2 for num in range(0,100) if num % 2 ==0}
+
+# print(my_list4)
+
+
+
+# my_list = []
+
+# for char in "hello":
+#     my_list.append(char)
+
+# print (my_list)
+
+
+
+
+
+
+
+
+
+
+ #lambda practicetasks
 # #Sqare it using lambda
 # my_list = [5,4,3]
 
@@ -6,11 +97,10 @@
 
 # print(new_list)
 
-#sort list where second value is smallest first and largest last using lambda
-
-a= [(0,2),(4,3),(10,-1),(9,9)]
-a.sort(False)
-print(a)
+# #sort list where second value is smallest first and largest last using lambda
+# a= [(0,2),(4,3),(10,-1),(9,9)]
+# a.sort(key=lambda x: x[1])
+# print(a)
 
 
 
