@@ -1,15 +1,141 @@
-def my_decorator(func):
-    def wrap_func(*args,**kwargs):
-        print("XXXXXXXXXX")
-        func(*args,**kwargs)
-        print("XXXXXXXXXX")
-    return wrap_func
+ Error HAndling
 
-@my_decorator
-def hello(greeting, emoji = ":("):
-    print(greeting, emoji)
 
-hello("hi")
+
+
+
+
+
+
+
+
+
+
+# # Create an @authenticated decorator that only allows the function to run is user1 has 'valid' set to True:
+# user1 = {
+#     'name': 'Sorna',
+#     'valid': True #changing this will either run or not run the message_friends function.
+# }
+
+
+# def authenticated(fn):
+#     # code here
+#     def wrapper(*args, **kwargs):
+#         if args[0]["valid"]:
+#             return fn(*args, **kwargs)
+#         else:
+#             return print("invalid user")
+
+#     return wrapper
+
+# @authenticated #  This tells Python to apply the authenticated 
+# # function as a decorator to message_friends. 
+# def message_friends(user):
+#     print('message has been sent')
+
+# message_friends(user1)
+
+
+
+# #Decorator
+# from time import time
+# def performance(fn):
+#     def wrapper(*args, **kawrgs):
+#         t1 = time()
+#         result = fn(*args, **kawrgs)
+#         t2 = time()
+#         print(f"took {t2-t1} ms")
+#         return result
+#     return wrapper
+
+# @performance
+# def long_time():
+#     for i in range(10000000):
+#         i*5
+
+# long_time()
+
+
+# # Decorator
+# def logger(fn):
+#     def wrapper(*args, **kwargs):
+#         print(f"Calling {fn.__name__} with arguments: {args} {kwargs}")
+#         result = fn(*args, **kwargs)
+#         print(f"{fn.__name__} returned: {result}")
+#         return result
+#     return wrapper
+
+# @logger
+# def add(x, y):
+#     return x + y
+
+# @logger
+# def greet(name, greeting="Hello"):
+#     return f"{greeting}, {name}!"
+
+# # Test the logger decorator
+# print(add(5, 10))
+# print(greet("Alice"))
+# print(greet("Bob", greeting="Hi"))
+
+
+
+# class Player:
+#     def __init__(self, name, level):
+#         self.name = name
+#         self.level = level
+#         self.exp = 0
+
+#     def gain_exp(self, points):
+#         self.exp += points
+#         print(f"{self.name} gained {points} experience points!")
+
+#     @staticmethod
+#     def calculate_damage(base_damage, weapon_bonus):
+#         return base_damage + weapon_bonus
+
+#     @staticmethod
+#     def calculate_level_up(current_level, exp_points):
+#         return current_level + exp_points // 100
+
+# # Create a player instance
+# player1 = Player("Hero", 5)
+
+# # Player gains experience
+# player1.gain_exp(120)
+
+# # Calculate damage without needing player-specific info
+# damage = Player.calculate_damage(50, 10)
+# print(f"Damage dealt: {damage}")
+
+# # Calculate level up based on total experience points
+# new_level = Player.calculate_level_up(player1.level, player1.exp)
+# print(f"{player1.name} is now at level {new_level}!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def my_decorator(func):
+#     def wrap_func(*args,**kwargs):
+#         print("XXXXXXXXXX")
+#         func(*args,**kwargs)
+#         print("XXXXXXXXXX")
+#     return wrap_func
+
+# @my_decorator
+# def hello(greeting, emoji = ":("):
+#     print(greeting, emoji)
+
+# hello("hi")
 
 
 
