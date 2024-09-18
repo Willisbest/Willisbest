@@ -1,4 +1,9 @@
- Error HAndling
+#Generators
+range(100)
+list(range(100))
+
+def make_list(num):
+    results = []
 
 
 
@@ -6,6 +11,73 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# def sum(num1, num2):
+#     try:
+#         return num1 + num2
+#     except (TypeError, ZeroDivisionError) as err:
+#         print(err)
+#         print("woops")
+
+# print(sum("1", 2))
+
+
+
+
+
+# #Error Handling
+
+# while True:
+#     try:
+#         age = int(input("what is your age? "))
+#         10/age
+#         raise ValueError("Hey, cut it out!")
+
+#     except ZeroDivisionError:
+#         print("You have to be older than zero")
+#     else:
+#         print("thank you!")
+#         break
+#     finally:
+#         print("I'm finally done")
+#     print("can you hear me?")
+
+
+# age = int(input("what is your age? "))
+# print("your are:", age, "years old!")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
