@@ -1,9 +1,148 @@
 #Generators
-range(100)
-list(range(100))
 
-def make_list(num):
-    results = []
+#def fib(num): # this takes the Index Number of Fibonacci, so F19=4181 and so on
+#Its supposed to return all the numbers (using generators) until we get to the index location
+
+def gen_fun(num):  
+    last = 0
+    current = 1
+    for _ in range(num):
+        yield last
+        temp = last
+        last = current
+        current = temp + current
+        
+for cunts in gen_fun(20):
+    print(cunts)     
+
+
+
+# def fib(num):
+#     return list(gen_fun(num))
+
+# print(fib(19))
+
+
+
+
+
+
+
+
+
+
+
+
+# class MyGen():
+#     current = 0
+#     #This makes it able to use first and last
+#     def __init__(self, first, last):
+#         self.first = first
+#         self.last = last
+#     #This makes us able to iterate through the Object
+#     def __iter__(self):
+#         return self
+#     #We also want to be able to use Next
+#     def __next__(self):
+#         if MyGen.current < self.last:
+#             num = MyGen.current
+#             MyGen.current += 1
+#             return num
+#         raise StopIteration
+
+
+# gen = MyGen(0,100)
+# #Were Looping through the Generator printing each value
+# for i in gen:
+#     print(i)
+
+
+
+
+
+# def special_for(iterable):
+#     iterator = iter(iterable)
+#     while True:
+#         try:
+#             print(iterator)
+#             print(next(iterator)*2)
+#         except StopIteration:
+#             break
+
+# special_for([1, 2, 3])
+
+
+
+
+
+
+
+# def gen_fun(num):
+#     for i in range(num):
+#         yield i
+
+# for item in gen_fun(100):
+    #...
+
+
+
+
+
+
+# from time import time
+
+# def performance(fn):
+#     def wrapper(*args, **kwargs):
+#         t1 = time()
+#         result = fn(*args, *kwargs)
+#         t2 = time()
+#         print(f'took {t2-t1} s')
+#         return result
+#     return wrapper
+
+# @performance
+# def long_time():
+#     print('1')
+#     for i in range(100000000): #it finishes after.
+#         i*5
+
+# long_time()
+# print()
+
+# @performance
+# def long_time2():
+#     print('2')
+#     for i in list(range(100000000)): #it took longer.
+#         i*5
+
+# long_time2()
+# print()
+
+
+
+# def generator_function(num):
+#     for i in range(num):
+#         yield i*2
+
+# g = generator_function(100)
+# next(g)
+# next(g)
+# print(next(g))
+# # for penis in generator_function(1000):
+# #     print(penis)
+
+
+# range(100)
+# list(range(100))
+
+# def make_list(num):
+#     result = []
+#     for i in range(num):
+#         result.append(i*2)
+#     return result
+
+# my_list = make_list(100)
+# print(my_list)
 
 
 
