@@ -1,20 +1,156 @@
+#Regular Expressions
+
+
+import re
+
+pattern = re.compile(r"^[a-zA-Z0-9$%&/]{8,}$")
+string = "32sd1fsdv%&"
+
+a = pattern.search(string)
+
+print(a)
+
+
+# print(a.start())#tells me when the text starts 10
+# print(a.end())#tells me when the text ends 13
+# print(a.group()) #grives us the matching part "bin"
+# #this is useful more multiple searches!
+#
+
+
+
+
+
+
+#somebody gives you a massive text file, any file, translate this to from de to en
+# import argostranslate.package
+# import argostranslate.translate
+# import os
+#
+# # Load and install the language package if needed
+# argostranslate.package.install_from_path("./app/translate-de_en-1_0.argosmodel")
+#
+# # Define paths for original and translated files
+# original_file_path = "./app/test.txt"
+# translated_file_path = "./app/test_translated.txt"
+#
+# # Read the file and use its content for translation
+# with open(original_file_path, mode="r", encoding="utf-8") as my_file:
+#     file_content = my_file.read()
+#
+# # Translate the content of the file from German to English
+# translated_text = argostranslate.translate.translate(file_content, "de", "en")
+#
+# # Create a new file and write the untranslated and translated text into it
+# with open(translated_file_path, mode="w", encoding="utf-8") as translated_file:
+#     translated_file.write("--- Original Text ---\n")
+#     translated_file.write(file_content)
+#     translated_file.write("\n\n--- Translated Text ---\n")
+#     translated_file.write(translated_text)
+#
+# # Output the translated text
+# print(f"Translated text written to {translated_file_path}")
+#
+
+
+
+
+# try:
+#     with open("./app/test.txt", mode="r") as my_file:
+#         print(text)
+# except FileNotFoundError as err:
+#     print("file does not exist")
+#     raise err
+# except IOError as err:
+#     print("IO Error")
+#     raise err
+#
+# # my_file = open("test.txt")
+# #
+# # print(my_file.readlines())
+# #
+# # my_file.close()
+# #
+# with open(r"C:\Users\km\Desktop\ViresConferre\Testprogramme\Willisbest\app\app\test.txt", mode="a") as my_file:
+#     # Your file operations go here
+#
+# with open("C:\\Users\\km\\Desktop\\ViresConferre\\Testprogramme\\Willisbest\\app\\app\\test.txt",mode="a") as my_file:
+# # Your file operations go here
+
+
+# import pdb
+#
+# def add(num1, num2):
+#     pdb.set_trace()
+#     return num1+num2
+#
+# add(4,"ffff")
+#
+#
+
+
+
+
+
+
+
+
+#modules
+# from array import array
+#
+# array("i", [1,2,3])
+#
+
+# import datetime
+#
+# print(datetime.date.today())
+
+
+# from collections import Counter, defaultdict, OrderedDict
+#
+# d1 = OrderedDict()
+# d1["a"] = 1
+# d1["b"] = 2
+#
+# d2 = OrderedDict()
+# d2["a"] = 2
+# d2["b"] = 1
+#
+# print(d2 == d1)
+
+# li = [1,2,3,4,5,6,7,7]
+# sentence = "bla bla skldjbnsadflg"
+
+# dictionary = defaultdict(lambda: "does not exist", {"a":1, "b":2})
+# print(dictionary["c"])
+
+
+
+
+
+
+
+
+
+
+
 #Generators
 
 #def fib(num): # this takes the Index Number of Fibonacci, so F19=4181 and so on
 #Its supposed to return all the numbers (using generators) until we get to the index location
 
-def gen_fun(num):  
-    last = 0
-    current = 1
-    for _ in range(num):
-        yield last
-        temp = last
-        last = current
-        current = temp + current
-        
-for cunts in gen_fun(20):
-    print(cunts)     
-
+# def gen_fun(num):
+#     last = 0
+#     current = 1
+#     for _ in range(num):
+#         yield last
+#         temp = last
+#         last = current
+#         current = temp + current
+#
+# for cunts in gen_fun(20):
+#     print(cunts)
+#
 
 
 # def fib(num):
