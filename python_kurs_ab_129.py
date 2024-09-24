@@ -1,14 +1,107 @@
+
+
+
+
+
+
+#Testing
+# Test this
+# from random import randint
+# import sys
+# # generate a number 1~10
+# answer = randint(1, 10)
+#
+# while True:
+#     try:
+#         guess = int(input('guess a number 1~10:  '))
+#         if  0 < guess < 11:
+#             if guess == answer:
+#                 print('you are a genius!')
+#                 break
+#         else:
+#             print('hey bozo, I said 1~10')
+#     except ValueError:
+#         print('please enter a number')
+#         continue
+
+# # #My answer:
+# from random import randint
+#
+#
+# # Function to generate a random number
+# def generate_random_number():
+#     return randint(1, 10)
+#
+#
+# # Function to check if the guess is valid
+# def is_valid_guess(guess):
+#     return 0 < guess < 11
+#
+#
+# Function to get user input
+# def get_user_guess():
+#     try:
+#         return int(input('Guess a number 1~10: '))
+#     except ValueError:
+#         print("Please enter a valid number.")
+#         return None
+#
+#
+# # Function to compare the guess with the answer
+# def check_guess(guess, answer):
+#     if guess == answer:
+#         print("You are a genius!")
+#         return True
+#     else:
+#         return False
+#
+#
+# # Main game logic
+# def game():
+#     answer = generate_random_number()
+#
+#     while True:
+#         guess = get_user_guess()
+#
+#         if guess is None:  # Invalid input, retry
+#             continue
+#
+#         if is_valid_guess(guess):
+#             if check_guess(guess, answer):
+#                 break
+#         else:
+#             print("Hey bozo, I said 1~10!")
+#
+#
+# # To start the game
+# if __name__ == "__main__":
+#     game()
+#
+#
+#
+#
+
+
+
+
+
+
+
+
+
+
+
 #Regular Expressions
 
 
-import re
-
-pattern = re.compile(r"^[a-zA-Z0-9$%&/]{8,}$")
-string = "32sd1fsdv%&"
-
-a = pattern.search(string)
-
-print(a)
+# import re
+#
+# pattern = re.compile(r"^[a-zA-Z0-9$%&/]{8,}$")
+# string = "32sd1fsdv%&"
+#
+# a = pattern.search(string)
+#
+# print(a)
 
 
 # print(a.start())#tells me when the text starts 10
